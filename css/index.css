@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
+body{
+    scroll-behavior: smooth;
+    align-items: center;
+}
+
 .main-body {
     width: 100%;
     background-size: cover;
@@ -11,7 +16,7 @@
     justify-content: center;
     background-attachment: fixed;
     background-color: #FFDEE9;
-background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
     /* z-index: 1; */
 }
 
@@ -79,7 +84,7 @@ img {
 /* Caption text */
 .text {
     color: #f2f2f2;
-    font-size: 50px;
+    font-size: 4vw;
     padding: 10px 14px;
     position: absolute;
     bottom: 20px;
@@ -94,9 +99,34 @@ img {
 }
 
 .sub-text{
-    font-size: 20px;
-    max-width: 400px;
+    font-size: 1.5vw;
+    max-width: 35vw;
     text-align: left;
+}
+
+.text-title {
+    color: #f2f2f2;
+    font-size: 5vw;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    font-family: 'Delicious Handrawn', cursive;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background-color: #ac979e65;
+    background-image: linear-gradient(45deg, #c3a9b2bc 0%, #7bb1afc3 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.sub-text-title{
+    font-size: 1.5vw;
+    max-width: 35vw;
+    text-align: justify;
 }
 
 /* Number text (1/3 etc) */
@@ -176,6 +206,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .info-pannel{
@@ -189,6 +220,7 @@ img {
 .info-pannel .profile{
     width: 40%;
     float: left;
+    align-self: center;
 }
 
 .info-pannel .profile img{
@@ -209,19 +241,28 @@ img {
 .info-pannel .other-info .name{
     font-size: 30px;
     padding-bottom: 25px;
+    padding-top: 5px;
+}
+
+.info-pannel .other-info .dis{
+    padding-bottom: 35px;
+    text-align: justify;
 }
 
 .info-pannel .social-media{
     position: absolute;
     bottom: 10px;
     right: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .info-pannel .social-media img{
     width: 25px;
     height: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 
@@ -244,3 +285,95 @@ img {
         font-size: 11px
     }
 }
+
+.whats-new{
+    width: 100%;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+.blog-post-container{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /*https://github.com/w3c/csswg-drafts/issues/1943*/
+    grid-template-rows: auto;
+    column-gap: 50px;
+    row-gap: 50px;
+    place-items: center;
+    margin-bottom: 30px;
+}
+  
+  .blog-post {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+
+  .blog-post:hover{
+    transform: translateY(-10px);
+  }
+
+  .blog-post .more-info{
+    padding: 20px;
+  }
+
+  .blog-post .more-info .blog-title{
+    font-size: large;
+  }
+
+  .blog-post p{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .more-info {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+  }
+  
+  .read-more {
+    cursor: pointer;
+    width: fit-content;
+    padding: 9px;
+    padding-right: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ebebeb;
+    transition-duration: 1s;
+    position: relative; /* make sure the parent element is positioned */
+  }
+
+  .read-more::after {
+    content: ""; /* specify the content as empty */
+    background-image: url(/images/svg/open-outline.svg); /* specify the path to your image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px; /* set image size */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%); /* vertically center the image */
+  }
+
+  .read-more:hover{
+    background-color: #cceae9;
+  }

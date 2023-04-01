@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*menu bar*/
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #e4e4e498;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #cfb3bd 0%, #8ac3c2 100%);
+    width: 0%;
+  }  
+
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +28,7 @@ body{
     justify-content: center;
     font-family: 'Sans-serif', Arial;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
 }
 
 /* Add a tooltip to any element with a title attribute */
@@ -42,7 +65,9 @@ body{
     cursor: pointer;
 }
 
-.main-body {
+.art-main-body {
+    margin-top: 50px;
+    max-width: 750px;
     width: 100%;
 }
 
@@ -55,17 +80,21 @@ body{
     position: relative;
 }
 
-.article-thumbnail-img{
+.article-thumbnail-img {
     width: 100%;
     height: 400px;
     overflow: hidden;
     border-radius: 20px;
-}
-
-.article-thumbnail-img img{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .article-thumbnail-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition-duration: 1s;
-}
+  }
+  
 
 /* .article-thumbnail:hover .article-thumbnail-img img{
     transform: scale(1.1);
@@ -77,24 +106,26 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: #ffffffb8;
-    backdrop-filter: blur(15px);
+    background-color: #ffffff8e;
+    backdrop-filter: blur(5px);
     font-size: 30px;
     padding: 20px;
     border-radius: 10px;
     /* cursor: pointer; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .author-description{
     position: absolute;
     display: inline-flex;
-    background-color: #ffffff7d;
+    background-color: #ffffffab;
     padding: 10px;
     border-radius: 10px;
     transform: translateY(-50%);
     left: 20px;
     backdrop-filter: blur(10px);
     cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .author-profile-picture{
@@ -167,7 +198,9 @@ body{
 }
 
 p{
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+    text-align: justify;
 }
 
 .p-note{
@@ -211,4 +244,93 @@ ol, ul{
 ol img{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-logo {
+        margin-left: 5px;
+    }
+  }
+
+  .tags{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 50px;
+  }
+
+  .tag{
+    display: flex;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 15px;
+    background-color: #FFDEE9;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+  }
+
+.tag::before {
+    content: url(/images/svg/at-outline.svg);
+    align-self: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+} 
+
+.qlinks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    background-color: #e5e5e5;
+    width: 100%;
+    max-width: 350px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.qlink{
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.t1{
+    display: inline-flex;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    background-color: #e9e9e9;
+}
+
+.t1 img{
+    padding-left: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.qlink:hover{
+    background-color: #bbbbbb74;
+}
+
+.art-footer{
+    display: flex;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.art-footer img{
+    width: 150px;
+    height: 150px;
 }

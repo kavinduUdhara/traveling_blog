@@ -9,10 +9,94 @@
     display: flex;
     z-index: 10;
     height: 65px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    overflow: hidden;
 }
 
+/*menu bar close and open button*/
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2.5px;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 7px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+
+  /*menu bar slider for phones*/
+  .sidenav {
+    height: 90%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffffc8;
+    backdrop-filter: blur(5px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: none;
+    width: 0;
+    top: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+
+  .sidenav .side-contanier{
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    background-color: #ffdee98c;
+    background-image: linear-gradient(45deg, #ffdee988 0%, #b5fffd85 100%);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px    ;
+  }
+  
+  .sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: pointer;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
 /**
 .menu-bar .menu-logo{
     width: 50px;
@@ -169,7 +253,11 @@
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+    .menu{
+        width: 90%;
+    }
+
     /* hide menu-list and menu-f-icons */
     .menu-list,
     .menu-f-icons {
@@ -177,17 +265,31 @@
     }
   
     /* display menu bar icon */
-    .menu-icon {
-      display: flex;
+    .container {
+      display: inline-block;
       justify-content: center;
       align-items: center;
       margin-right: 10px;
       cursor: pointer;
+      align-self: center;
+      position: absolute;
+      left: 7px;
     }
-  
-    .menu-icon i {
-      font-size: 24px;
-      color: #000;
+
+    .menu-logo {
+        align-self: center;
+        margin-left: 44px;
+        background-color: rgba(221, 221, 221, 0.3);
+        position: absolute;
+        display: inline-flex;
+        border-radius: 10px;
+        cursor: pointer;
+        transition-duration: 1s;
+        align-items: center;
+        justify-content: center;
     }
+  }
+  .sidenav {
+    display: block;
   }
   

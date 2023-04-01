@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>article-html-generator-exampe1</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> My_Solo_Adventure_in_Japan</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/traveling-solo-in-Japan-6.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">My Solo Adventure in Japan</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/01/2023</div>
+                    </div>
+                </div>
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="article-discription">
+                Node.js is a JavaScript runtime that allows developers to run JavaScript on the server
+                side. It provides fast and efficient server-side scripting and enables the building
+                of complex and scalable applications. Popular for web development, it allows
+                developers to use the same language for both client and server-side programming, 
+                making it a highly efficient platform.
+            </div> -->
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->
+            <div class="article-body">
+                <h1>Narrative</h1>
+                <p>I had always dreamed of traveling to Japan. The country's rich history, unique culture, and stunning natural landscapes had always fascinated me. So, when I finally had the chance to visit Japan last year, I jumped at the opportunity. I decided to embark on a solo adventure, as I wanted to immerse myself fully in the Japanese experience. I arrived in Tokyo, and immediately felt a sense of excitement and anticipation. The city was bustling with energy, and there was so much to see and do .One of my first stops was the famous Tsukiji Fish Market, where I witnessed the early morning auction of the day's fresh catch. It was a fascinating sight, with vendors shouting out bids and the fish being swiftly loaded onto trucks to be transported across the city. Next, I headed to the historic Asakusa district, where I visited the iconic Senso-ji Temple. The temple was stunning, with its vibrant red and gold architecture and serene atmosphere. I spent hours wandering through the complex, admiring the intricate details of the structures and soaking up the peaceful ambiance .As I continued my journey, I traveled to Kyoto, the ancient capital of Japan. The city was a stark contrast to the bustling metropolis of Tokyo, with its serene temples and tranquil gardens. I visited the famous Fushimi Inari Shrine, where I hiked through the winding paths of the forested mountain and encountered dozens of vermilion torii gates along the way. My journey through Japan was a truly unforgettable experience. I met kind and generous people, tried delicious food, and saw breathtaking landscapes. I learned so much about the culture and traditions of this amazing country, and I left with a deep appreciation for all that Japan has to offer.</p>
+                <h1>Comparative</h1>
+                <p>When I embarked on my solo adventure in Japan, I was filled with a mix of excitement and nervousness. As I traveled through the country, I couldn't help but notice the stark differences in culture and customs from my home country. However, as the trip progressed, I discovered that the differences and similarities between Japan and my home country offered unique experiences and perspectives. One of the most noticeable differences between Japan and my home country was the emphasis on respect and politeness. From bowing to others as a form of greeting to the careful handling of chopsticks at meals, I found that Japan had a deeply ingrained sense of respect for others that I had never experienced before. This cultural difference was both fascinating and humbling, as it reminded me to be more conscious of my actions and their impact on those around me. Another major difference was the language barrier. Although I had studied Japanese prior to the trip, I found that communicating with locals was still a challenge. This made me appreciate the power of nonverbal communication and forced me to be more creative in finding ways to communicate effectively. However, despite the language barrier, I was impressed by how welcoming and helpful the locals were. They went out of their way to assist me and make me feel at home, despite the fact that I was a local. Despite the differences, I also discovered several similarities between Japan and my home country. For instance, both cultures valued cleanliness and orderliness. The streets and public spaces were always spotless, and people took great care to maintain a clean and organized environment. Additionally, I noticed that both cultures placed a high value on family and community. Although the dynamics were different, I observed a sense of togetherness and interdependence in both cultures. In conclusion, my solo adventure in Japan was an eye-opening experience that taught me a lot about myself and the world around me. The cultural differences between Japan and my home country were both challenging and enlightening, and I appreciated the chance to learn from them. However, I also discovered that despite the differences, there were many similarities that connected the two cultures. Overall, my trip to Japan was a reminder of the power of travel to broaden one's horizons and gain new perspectives.</p>
+                <h1>Descriptive</h1>
+                <p>I embarked on a solo adventure to Japan with a sense of anticipation and nervousness. The country had always fascinated me with its unique blend of ancient traditions and modern innovations. As I arrived at Narita Airport, I couldn't help but feel a sense of excitement mixed with a tinge of uncertainty. As I traveled through the bustling streets of Tokyo, the city immediately engulfed me with its sheer energy and vibrancy. The neon lights, the skyscrapers, and the busy people all added to the electric atmosphere. I spent my first few days exploring the famous landmarks of Tokyo, from the magnificent Tokyo Tower to the bustling Shibuya Crossing. The city's impeccable cleanliness and efficient public transport system left me in awe. I then traveled to Kyoto, the cultural capital of Japan, to experience a more traditional side of the country. The city's serene temples and picturesque gardens transported me to another time. I spent my days visiting the ancient Kiyomizu-dera Temple and the breathtaking Arashiyama Bamboo Grove. The peacefulness of the city, in contrast to the hustle and bustle of Tokyo, was refreshing. One of the highlights of my solo adventure was visiting the iconic Mount Fuji. As I ascended the mountain, the breathtaking views of the surrounding landscapes left me speechless. The journey to the summit was challenging, but the sense of accomplishment when I finally reached the top was unparalleled. As my solo adventure in Japan came to an end, I realized how much I had learned about myself and the country. I had pushed myself out of my comfort zone, tried new foods, and immersed myself in a completely different culture. The kindness and hospitality of the Japanese people had made my journey even more unforgettable. I left Japan with a deep appreciation for its rich culture and a desire to return one day.</p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Japan</div>
+            <div class="tag" tabindex="0">travel</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>

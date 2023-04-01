@@ -5,20 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/scrool-bar.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Explore | Traveling & More | Blog</title>
 </head>
 <body>
-    <div class="menu">
-        <div class="menu-logo" onclick="window.location.href='#'">
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}">What's new</a>
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}">Contact Us</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='#'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}">
             <img src="images/explore-logo.png" alt="logo">
         </div>
         <div class="menu-list">
             <ul>
-                <li onclick="window.location.href='#what\'s-new'">what's_new</li>
-                <li onclick="window.location.href='#categories'" class="drop-down">categories <img src="images/svg/chevron-down-outline.svg" alt=""></li>
+                <li tabindex="0" onclick="window.location.href='#what\'s-new'" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';}">what's_new</li>
+                <!-- <li tabindex="0" onclick="window.location.href='#categories'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#categories';}">categories <img src="images/svg/chevron-down-outline.svg" alt=""></li> -->
+                <li tabindex="0" onclick="window.location.href='#categories'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#categories';}">Contact_Us</li>
                 <!--<li onclick="window.location.href='#about'">About</li>-->
             </ul>
         </div>
@@ -32,10 +83,10 @@
         <div class="space">
         </div>
         <div class="menu-f-icons">
-            <div class="f-icon">
+            <div class="f-icon" tabindex="0">
                 <img src="images/svg/search-outline.svg" alt="">
             </div>
-            <div class="f-icon profile" title="authers information">
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
                 <img src="images/profile.jpg" alt="">
             </div>
         </div>
@@ -44,29 +95,29 @@
         <!--code from - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow -->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
+                <div class="numbertext">Welcome</div>
                 <img src="images/slideshow/001.jpg"
                     style="width:100%">
-                <div class="text">TRAVELING FOREVER
-                    <div class="sub-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea natus tenetur, mollitia sit, blanditiis...</div>
+                <div class="text-title">Welcome
+                    <div class="sub-text-title">Welcome to 'Explore with Ladini'! Join me on this journey as we explore new cultures, beautiful landscapes, and all the wonders our world has to offer. Let's discover together!</div>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img src="images/slideshow/002.jpeg"
+                <img src="images/articles/traveling-solo-in-Japan-6.jpg"
                     style="width:100%">
-                <div class="text">Caption Two
-                    
+                <div class="text">My Solo Adventure in Japan
+                    <div class="sub-text">Japan travel: Rich culture, bustling cities, serene temples, stunning landscapes</div>
                 </div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="images/slideshow/banner_for_electronic_items_selling_center_tv_loudspeak_03e0865a-f69b-4bc0-87b5-674db94eadb9-edit.png"
+                <img src="images/slideshow/002.jpeg"
                     style="width:100%">
                 <div class="text">Caption Three</div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+            <a class="prev" onclick="plusSlides(-1)" tabindex="0">❮</a>
+            <a class="next" onclick="plusSlides(1)" tabindex="0">❯</a>
             <div class="dot-containser">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -102,31 +153,80 @@
             </script>
         </div>
     </div>
-    <div class="whats-new">
+    <div class="whats-new" id="what's-new">
         <div class="title">
             <img src="images/svg/journal-outline.svg" alt="">
             <h1>what's new</h1>
         </div>
+        <div class="blog-posts">
+            <div class="blog-post-container">
+              <div class="blog-post" tabindex="0" onclick="window.open('My-Solo-Adventure-in-Japan.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('My-Solo-Adventure-in-Japan.html', '_blank')}">
+                <div class="image">
+                  <img src="images/articles/traveling-solo-in-Japan-6.jpg" alt="">
+                </div>
+                <div class="more-info">
+                  <div class="blog-title">My Solo Adventure in Japan</div>
+                  <p>Japan travel: Rich culture, bustling cities, serene temples, stunning landscapes</p>
+                  <button class="read-more">Read More</button>
+                </div>
+              </div>
+              <div class="blog-post" tabindex="0">
+                <div class="image">
+                  <img src="images/slideshow/001.jpg" alt="">
+                </div>
+                <div class="more-info">
+                  <div class="blog-title">TRAVELING FOREVER</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea natus tenetur, mollitia sit, blanditiis...</p>
+                  <button class="read-more">Read More</button>
+                </div>
+              </div>
+              <div class="blog-post" tabindex="0">
+                <div class="image">
+                  <img src="images/slideshow/001.jpg" alt="">
+                </div>
+                <div class="more-info">
+                  <div class="blog-title">TRAVELING FOREVER</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea natus tenetur, mollitia sit, blanditiis...</p>
+                  <button class="read-more">Read More</button>
+                </div>
+              </div>
+              <div class="blog-post" tabindex="0">
+                <div class="image">
+                  <img src="images/slideshow/001.jpg" alt="">
+                </div>
+                <div class="more-info">
+                  <div class="blog-title">TRAVELING FOREVER</div>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea natus tenetur, mollitia sit, blanditiis...</p>
+                  <button class="read-more">Read More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
     </div>
-    <div class="authors-info">
+    <div class="authors-info" id="authors-info">
         <div class="title">
             <img src="images/svg/person-outline.svg" alt="">
-            <h1>Authors info</h1>
+            <h1>The Explorer's Log</h1>
         </div>
-        <div class="info-pannel">
+        <div class="info-pannel" tabindex="0">
             <div class="profile">
                 <img src="images/profile.jpg" alt="">
             </div>
             <div class="other-info">
                 <div class="name">Ladini Wijerathna</div>
-                <div class="dis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, voluptatem, cumque fuga porro magnam numquam aut earum quas i</div>
+                <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
             </div>
             <div class="social-media">
-                <img src="images/svg/logo-facebook.svg" alt="">
-                <img src="images/svg/logo-instagram.svg" alt="">
-                <img src="images/svg/logo-linkedin (1).svg" alt="">
+                <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
             </div>
         </div>
+    </div>
+    <div class="art-footer">
+        <img src="/images/explore-logo.png" alt="">
+        <div class="text-001">With Ladini</div>
     </div>
 </body>
 </html>
