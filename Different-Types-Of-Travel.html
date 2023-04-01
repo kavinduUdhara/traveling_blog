@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Different-Types-Of-Travel</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> Different_Types_Of_Travel</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/Different-Types-Of-Travel.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">Different Types Of Travel</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/01/2023</div>
+                    </div>
+                </div>
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="article-discription">
+                Node.js is a JavaScript runtime that allows developers to run JavaScript on the server
+                side. It provides fast and efficient server-side scripting and enables the building
+                of complex and scalable applications. Popular for web development, it allows
+                developers to use the same language for both client and server-side programming, 
+                making it a highly efficient platform.
+            </div> -->
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->
+            <div class="article-body">
+                <h1>Different Types Of Travel:</h1>
+                <ol>
+                    <li>Leisure travel</li>
+                    <li>Adventure travel</li>
+                    <li>Cultural travel</li>
+                    <li>Luxury travel</li>
+                </ol>
+                <h1>1. Leisure Travel</h1>
+                <p>Leisure travel refers to travel undertaken for pleasure, rather than for business or other purposes. It includes activities such as sightseeing, cultural experiences, relaxation, and adventure sports. Leisure travel has become increasingly popular in recent years, as more people have the time and resources to explore new destinations and pursue their interests and hobbies. Leisure travel can take many different forms, from short weekend getaways to extended vacations to exotic destinations. It can involve traveling alone, with friends, or with family. Many people also choose to combine leisure travel with other activities, such as attending festivals or concerts, visiting museums or art galleries, or participating in outdoor adventures like hiking, skiing, or surfing. Overall, leisure travel provides an opportunity to escape the stresses of daily life, experience new cultures and environments, and create lasting memories with loved ones. It is an important aspect of many people's lives and has a significant impact on the global tourism industry.</p>
+                <h1>2. Adventure Travel</h1>
+                <p>Adventure travel refers to a type of tourism that involves exploring remote or exotic destinations, engaging in physically and mentally challenging activities, and seeking out unique experiences. It often involves outdoor activities such as hiking, trekking, mountaineering, rock climbing, rafting, kayaking, surfing, and wildlife watching, among others. Adventure travel is popular among those who seek a sense of excitement and adrenaline rush, as well as those who want to step out of their comfort zone and immerse themselves in new cultures and environments. It offers opportunities to explore natural wonders, learn about different cultures, and connect with like-minded individuals. Adventure travel can be enjoyed by people of all ages and fitness levels, and there are many tour operators and travel companies that specialize in organizing adventure trips. These companies provide knowledgeable guides, specialized equipment, and logistical support to ensure the safety and enjoyment of their clients. While adventure travel can be physically demanding and sometimes risky, it can also be highly rewarding and life-changing. It provides a unique opportunity to challenge oneself, learn new skills, and gain a deeper appreciation for the world we live in.</p>
+                <h1>3. Cultural Travel</h1>
+                <p>Cultural travel refers to a type of tourism that focuses on exploring the cultural and historical aspects of a destination. It involves visiting museums, art galleries, historical landmarks, and other cultural attractions, as well as engaging with local people, trying traditional food, and learning about customs and traditions. Cultural travel is popular among those who are interested in history, art, architecture, literature, and other cultural aspects of a destination. It offers opportunities to learn about different cultures, broaden one's perspective, and gain a deeper understanding and appreciation for the world we live in. Cultural travel can be enjoyed by people of all ages and backgrounds, and there are many tour operators and travel companies that specialize in organizing cultural trips. These companies provide knowledgeable guides, specialized itineraries, and logistical support to ensure the best possible cultural experience for their clients. While cultural travel may not be physically demanding, it can be mentally stimulating and enriching. It provides a unique opportunity to learn about different cultures, gain new insights and perspectives, and make lasting connections with people from different parts of the world.</p>
+                <h1>4. Luxury Travel</h1>
+                <p>Luxury travel refers to a type of tourism that focuses on providing the highest level of comfort, service, and amenities to travellers. It involves staying in high-end accommodations, enjoying fine dining experiences, engaging in exclusive activities, and receiving personalized attention from staff. Luxury travel is popular among those who want to indulge in the finer things in life, and who are willing to pay a premium for exceptional service and comfort. It offers opportunities to relax and unwind in a luxurious setting, as well as to experience unique and exclusive activities that are not available to the general public. Luxury travel can be enjoyed by people of all ages and interests, and there are many tour operators and travel companies that specialize in organizing luxury trips. These companies provide personalized itineraries, access to exclusive venues and events, and round-the-clock assistance to ensure the best possible experience for their clients. While luxury travel may not involve physical or cultural exploration, it offers a unique opportunity to experience the world in a way that is comfortable, luxurious, and unforgettable. It provides a chance to escape from the stresses of daily life and indulge in world-class amenities and experiences.</p>
+                <h1>Four Elements Of Travel:</h1>
+                <ol>
+                    <li>Funding/Money</li>
+                    <li>Destinations</li>
+                    <li>Right time and season</li>
+                    <li>Transportation</li>
+                </ol>
+                <h1>1. Funding/Money</h1>
+                <p>Travel can be expensive, but there are several ways to fund it. Here are some common ways to finance travel:</p>
+                <img src="images/articles/micheile-henderson-ZVprbBmT8QA-unsplash-scaled-e1601457494686.jpg" alt="">
+                    <ol>
+                        <li><span class="code-style-1">Savings:</span> This is the most common way to fund travel. By setting aside money each month, you can accumulate enough to cover your travel expenses. It's important to create a budget and stick to it, so you can save enough for your desired trip.</li>
+                        <li><span class="code-style-1">Credit cards:</span> Many travel credit cards offer rewards, such as points or miles, that can be used towards travel expenses. By using your credit card for everyday purchases and paying off the balance in full each month, you can accumulate rewards that can significantly reduce your travel costs.</li>
+                        <li><span class="code-style-1">Travel loans:</span> Some financial institutions offer travel loans, which can be used to cover the cost of travel expenses. These loans can be helpful if you need to travel urgently, but it's important to carefully consider the interest rates and repayment terms before taking out a loan.</li>
+                        <li><span class="code-style-1">Crowd funding:</span> Crowd funding platforms, such as GoFundMe or Kickstarter, can be used to raise funds for travel. This option is usually reserved for special circumstances, such as medical emergencies or humanitarian missions, and can be difficult to secure for regular travel.</li>
+                        <li><span class="code-style-1">Work abroad:</span> If you're planning an extended trip, consider working abroad. Many countries offer working holiday visas that allow travellers to work while they explore the country. This can be a great way to finance your travel while gaining valuable work experience and cultural immersion.</li>
+                    </ol>
+                <h1>2. Destinations</h1>
+                <p>Destinations refer to the places that people travel to for leisure or business purposes. These can be cities, countries, or specific landmarks and attractions. Travel destinations can vary widely, from tropical beaches and exotic locales to historical landmarks and cultural hotspots. Some destinations are popular for their natural beauty, such as national parks and scenic drives, while others are known for their nightlife, shopping, and entertainment. The choice of a destination for travel usually depends on a person's interests, budget, and other factors such as time of year and travel restrictions.</p>
+                <p><b>Categories of travel destinations, </b></p>
+                    <ol>
+                        <li><span class="code-style-1">Geographical categories:</span> Destinations can be classified based on their geographic location such as continents, regions, or countries. For example, popular geographical categories include Europe, Asia, Africa, or the Caribbean.</li>
+                        <li><span class="code-style-1">Cultural categories:</span> Destinations can also be categorized based on their cultural heritage, including art, history, and tradition. Some examples include destinations with significant religious landmarks, ancient ruins, or famous museums.</li>
+                        <li><span class="code-style-1">Activity-based categories:</span> Travel destinations can also be categorized based on the type of activities that they offer such as beach destinations, adventure destinations, or ski destinations.</li>
+                        <li><span class="code-style-1">Budget-based categories:</span> Travel destinations can also be categorized based on the type of budget they cater to, such as luxury destinations, mid-range destinations, or budget-friendly destinations.</li>
+                        <li><span class="code-style-1">Ecological categories:</span> Destinations can also be categorized based on their ecological features, such as eco-tourism destinations or wildlife conservation areas.</li>
+                    </ol>
+                <h1>3. Right Time And Season</h1>
+                <img src="images/articles/banner-with-travel-elements-in-water-splash.jpg" alt="">
+                <p>The best season for traveling can vary depending on your destination and personal preferences. Here are some general recommendations for each season:</p>
+                <ol>
+                    <li><span class="code-style-1">Summer:</span> Summer season is a popular time for travel in many parts of the world, as it is typically associated with warm weather, longer days, and school holidays. In the Northern Hemisphere, summer generally refers to the months of June, July, and August, while in the Southern Hemisphere, it is December, January, and February. Some popular destinations for summer travel include beaches and coastal areas, national parks, cities with outdoor festivals and events, and areas with cooler climates. However, it's important to note that summer travel can also come with higher costs and crowds, as many people have the same idea to take a summer vacation. It's a good idea to plan ahead and book accommodations and activities in advance to avoid disappointment or higher prices. It's also important to research local customs, weather, and safety considerations before traveling to any destination.</li>
+                    <li><span class="code-style-1">Fall:</span> The fall season, also known as autumn, is one of the four seasons that occur in temperate regions. It typically begins in September and ends in November in the Northern Hemisphere, and from March to May in the Southern Hemisphere. During the fall season, temperatures begin to cool down from the warm summer months, and the days become shorter. The leaves on trees change color, turning vibrant shades of red, orange, and yellow, before falling to the ground. This process is called leaf peeping, and it is a popular activity for people to enjoy the beautiful scenery. Fall is also the time for many seasonal activities such as apple picking, pumpkin carving, and hayrides. It is a popular time for outdoor activities such as hiking, camping, and bonfires. The fall season also includes several holidays such as Halloween and Thanksgiving. In many cultures, the fall season is associated with harvest and abundance, as it is the time when crops are harvested and stored for the winter months. Overall, the fall season is a beautiful and transitional time of the year that is enjoyed by many.</li>
+                    <li><span class="code-style-1">Winter</span>The best time to travel during winter depends on your personal preferences and the destinations you plan to visit. If you enjoy winter sports such as skiing or snowboarding, then you may want to travel to mountainous regions during the winter season. If you prefer warmer weather, you may want to consider traveling to destinations that have milder winter climates, such as the southern hemisphere or tropical regions .It's important to research the weather and climate conditions of your desired destination before planning your trip. You should also consider the peak travel season for that location, as winter is often a popular time for travel due to holidays and school breaks. Overall, the winter season can be a great time to travel as it offers a unique range of activities and experiences that may not be available during other seasons. Just make sure to pack accordingly for the climate and weather conditions.</li>
+                    <li><span class="code-style-1">Spring:</span> Spring can be a great time to travel, as the weather is generally mild and pleasant in many parts of the world. However, the ideal spring weather for travel depends on your personal preferences and the destinations you plan to visit. In general, spring weather tends to be comfortable in many places, with temperatures typically ranging from the mid-50s to mid-70s Fahrenheit (around 12-24 degrees Celsius) in many parts of the Northern Hemisphere. This can be a great time to visit places that might be too hot or too cold during other times of the year. If you enjoy outdoor activities, you might want to consider visiting areas with spring blooms, such as the cherry blossoms in Japan or the tulip fields in the Netherlands. You could also plan a trip to a beach destination, such as the Caribbean or Hawaii, where the weather is warm year-round. Overall, the key to choosing the right spring destination is to consider your interests and preferred activities, and to research the weather patterns of the places you are considering. This will help you choose a location that is best suited to your needs and preferences. In summary, the best season for travel depends on your destination and personal preferences. Consider factors such as weather, crowds, and prices when deciding when to plan your next trip.</li>
+                </ol>
+                <h1>4. Transportation</h1>
+                <p>Transportation is an essential aspect of travel, both for local and foreign destinations. The mode of transportation that you choose can greatly affect your travel experience. Here are some common modes of transportation for local and foreign travel:</p>
+                <h2>Local Travel:</h2>
+                <ul>
+                    <li><span class="code-style-1">Public Transportation:</span> Buses, subways, trams, and trains are common modes of public transportation for local travel. They are usually affordable and convenient, and can take you to various parts of a city or town.</li>
+                    <li><span class="code-style-1">Taxis and Ride-Hailing Services:</span> Taxis and ride-hailing services like Uber and Lyft are also popular options for local travel. They can be more expensive than public transportation, but they offer greater convenience and flexibility.</li>
+                    <li><span class="code-style-1">Rental Cars:</span> Rental cars are a good option if you want to explore a local area on your own schedule. They can be more expensive than public transportation, but they offer greater freedom and flexibility.</li>
+                </ul>
+                <h2>Foreign Travel:</h2>
+                <ul>
+                    <li><span class="code-style-1">Air Travel:</span> Air travel is the most common mode of transportation for foreign travel. It is fast and convenient, but can also be expensive.</li>
+                    <li><span class="code-style-1">Trains:</span> Trains are also a popular mode of transportation for foreign travel, especially in Europe and Asia. They offer scenic views and are usually affordable.</li>
+                    <li><span class="code-style-1">Buses:</span> Buses are a budget-friendly option for foreign travel. They can be slower than trains or planes, but they can also be more comfortable and offer scenic routes.</li>
+                    <li><span class="code-style-1">Rental Cars:</span> Rental cars are also an option for foreign travel, but they can be more expensive and may require additional permits and paperwork.</li>
+                </ul>
+                <p>In summary, the best season for travel depends on your destination and personal preferences. Consider factors such as weather, crowds, and prices when deciding when to plan your next trip.
+                </p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">travel</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>
