@@ -111,6 +111,8 @@ body{
     font-size: 30px;
     padding: 20px;
     border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
     /* cursor: pointer; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
