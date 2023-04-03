@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>A Transformative Journey: Exploring New Cultures</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> A_Transformative_Journey</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/A-Transformative-Journey.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">A Transformative Journey: Exploring New Cultures</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/02/2023</div>
+                    </div>
+                </div>
+
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->                
+            <div class="article-discription">
+                A vivid account of a traveler's journey across the world, experiencing new sights, sounds, and cultures. From bustling streets and vibrant markets to breath-taking scenery and moments of joy and challenge, the journey highlights the transformative power of travel.
+            </div>
+            <div class="article-body">
+                <p>Travelling is an experience that is both exhilarating and transformative. I remember my last trip vividly, as it was a journey that took me across the world and introduced me to new sights, sounds, and cultures. As I stepped off the plane, the humid air of the tropics hit me, and I was immediately taken aback by the cacophony of noise and activity around me. The streets were crowded with people, all bustling about their day, and I felt a wave of excitement wash over me. I couldn't wait to explore everything this new place had to offer. I spent the first few days of my trip wandering through the streets, taking in the colourful architecture and the vibrant markets that filled every corner. I tasted new foods and met locals who welcomed me with open arms, eager to share their stories and traditions with me. Everywhere I turned, there was something new and exciting to discover. One day, I took a hike into the nearby mountains, where I was surrounded by breath-taking scenery and the sounds of nature. As I climbed higher and higher, the air grew cooler and the views more spectacular, until I reached the summit and gazed out at the vast expanse of land below me. It was a moment that took my breath away and reminded me of the beauty that can be found in every corner of the world. Throughout my trip, I experienced moments of both joy and challenge. There were times when I felt homesick or overwhelmed, but there were also moments of pure bliss and wonder that I will never forget. I realized that travel is not just about seeing new places, but about opening yourself up to new experiences and perspectives. As I boarded my plane home, I felt a sense of nostalgia for the place that had captured my heart. But I also felt a renewed sense of wonder and curiosity, eager to plan my next adventure and continue exploring all the world has to offer.</p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Descriptive Writing</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>

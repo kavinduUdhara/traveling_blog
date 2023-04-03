@@ -224,7 +224,7 @@ a{
 }
 
 a::after {
-    content: url(images/svg/open-outline\ \(1\).svg);
+    content: url(/images/svg/open-outline.svg);
     padding-left: 5px;
     display: inline-block;
     width: 20px;
@@ -241,6 +241,12 @@ a::after {
 
 ol, ul{
     line-height: 1.7;
+    text-align: justify;
+}
+
+.article-body li{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 ol img{
@@ -260,6 +266,7 @@ ol img{
     padding-right: 30px;
     margin-bottom: 50px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tag{
@@ -273,8 +280,8 @@ ol img{
     background-color: #FFDEE9;
     cursor: pointer;
     background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
 .tag::before {
@@ -338,4 +345,9 @@ ol img{
 .art-footer img{
     width: 150px;
     height: 150px;
+}
+
+.article-body img{
+    margin-top: 20px;
+    margin-bottom: 25px;
 }

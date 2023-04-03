@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Wanderlust: 5 Must-Visit Travel Destinations Around the World</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> 5_Must_Visit_Travel_Destinations</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/Paris.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">Wanderlust: 5 Must-Visit Travel Destinations Around the World</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/02/2023</div>
+                    </div>
+                </div>
+
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->                
+            <div class="article-discription">
+                Explore the romantic city of Paris, the tropical paradise of Bali, the vibrant and modern Tokyo, the bustling metropolis of New York City, and the laid-back coastal city of Sydney. Indulge in world-renowned cuisine, immerse yourself in rich cultural heritage, and discover iconic landmarks and landscapes that will leave you in awe. These destinations are sure to satisfy your wanderlust and offer unforgettable experiences.
+            </div>
+            <div class="article-body">
+                <h1>Best Destinations for Travel in World</h1>
+                <p>Sure, here are some introductions to popular travel destinations around the world:</p>
+                <ol>
+                    <li><span class="code-style-1">Paris, France:</span> Known as the "City of Love," Paris is famous for its romantic ambiance, stunning architecture, and world-renowned cuisine. Visitors can explore iconic landmarks like the Eiffel Tower, the Louvre Museum, and Notre Dame Cathedral, stroll through charming neighbourhoods like Montmartre and the Marais, and indulge in delicious French pastries, wine, and cheese. Paris is the capital city of France, located in the northern part of the country. It is one of the most populous cities in Europe, with a population of over 2 million people, and it is known for its rich history, architecture, fashion, art, and cuisine. Some of the most famous landmarks in Paris include the Eiffel Tower, the Louvre Museum, Notre-Dame Cathedral, the Champs-Élysées avenue, and the Arc de Triomphe. Paris is also known for its many beautiful parks and gardens, including the Luxembourg Gardens and the Tuileries Gardens. Paris is a global centre for art and culture, with many museums and galleries showcasing some of the world's most famous art collections, including works by Picasso, Monet, and Van Gogh. The city is also famous for its fashion industry, with numerous high-end fashion houses and boutiques located in the city's fashionable neighbourhoods. Paris is also home to many world-renowned universities, including the Sorbonne and Sciences Po, making it a hub for academic research and innovation. Finally, Paris is known for its excellent cuisine, including traditional French dishes such as escargots, coq au vin, and bouillabaisse, as well as delicious pastries such as croissants and macaroons.</li>
+                    <img src="images/articles/Paris-France.jpg" alt="parice or france">
+                    <li><span class="code-style-1">Bali, Indonesia:</span> Bali is a tropical paradise known for its pristine beaches, lush jungles, and rich cultural heritage. Visitors can relax on sandy beaches, surf world-class waves, trek through rice terraces, and discover ancient temples and traditional villages. Bali is an Indonesian island located in the westernmost end of the Lesser Sunda Islands, lying between Java to the west and Lombok to the east. It is known for its beautiful beaches, rich culture, and unique Hindu traditions. Bali has a population of over 4 million people and is the largest tourist destination in Indonesia, with millions of visitors every year. The island is famous for its beautiful landscapes, including its beaches, lush forests, and picturesque rice paddies. The island also has a rich cultural heritage, which is evident in its traditional dances, temples, and religious ceremonies. Some of the most popular tourist destinations in Bali include Ubud, Kuta, Seminyak, and Nusa Dua. Visitors can also enjoy outdoor activities such as surfing, scuba diving, and hiking, as well as sample delicious local cuisine, which features a mix of Indonesian, Chinese, and Indian influences</li>
+                    <img src="images/articles/Bali-Indonesia.jpg" alt="Bali, Indonesia">
+                    <li><span class="code-style-1">Tokyo, Japan:</span> Tokyo is a vibrant and modern city that offers a unique blend of old and new. Visitors can explore futuristic neighbourhoods like Shinjuku and Shibuya, immerse themselves in Japanese culture and tradition, and indulge in delicious Japanese cuisine, from sushi and ramen to wagyu beef and sake. Tokyo is the capital city of Japan and one of the largest cities in the world. Located on the eastern coast of the island of Honshu, Tokyo is the economic, political, and cultural center of Japan. The city has a population of over 13 million people and is known for its modern technology, bustling streets, and traditional culture. Tokyo is home to many famous landmarks, including the Tokyo Tower, the Imperial Palace, and the Meiji Shrine. The city is also famous for its food, including sushi, ramen, and tempura. Additionally, Tokyo is known for its shopping, entertainment, and nightlife, with popular districts such as Shinjuku, Shibuya, and Roppongi. Tokyo hosted the 2020 Summer Olympics, which were postponed to 2021 due to the COVID-19 pandemic. The city is served by two major airports, Narita International Airport and Haneda Airport, and has  an extensive public transportation system, including the world-famous Tokyo subway system.</li>
+                    <img src="images/articles/Tokyo-Japan.jpg" alt="Tokyo, Japan">
+                    <li><span class="code-style-1">York City, USA:</span> Known as the "City That Never Sleeps," New York City is a bustling metropolis that offers endless opportunities for exploration and adventure. Visitors can take in the iconic skyline, explore world-class museums and galleries, shop in trendy neighbourhoods like SoHo and Williamsburg, and indulge in diverse cuisine from around the world. New York City is the largest city in the United States, located in the state of New York. It is known as the "City That Never Sleeps" and is famous for its iconic landmarks such as the Statue of Liberty, Empire State Building, Times Square, Central Park, and the Brooklyn Bridge. It is a global hub for finance, fashion, art, and entertainment, attracting millions of visitors each year. New York City is also home to some of the world's most prestigious universities, museums, and cultural institutions. With a population of over 8 million people, it is one of the most diverse and cosmopolitan cities in the world, with residents from all over the globe.</li>
+                    <img src="images/articles/Times-Square-New-York.jpg" alt="times square new yourk">
+                    <li><span class="code-style-1">Sydney, Australia:</span> Sydney is a vibrant coastal city known for its stunning beaches, iconic landmarks, and laid-back lifestyle. Visitors can soak up the sun on Bondi Beach, take in the Opera House and Harbour Bridge, explore trendy neighbourhoods like Surry Hills and Paddington, and discover the city's rich cultural heritage. Sydney is the capital city of the state of New South Wales in Australia and is located on the east coast of the country. It is known for its beautiful harbour, iconic landmarks such as the Sydney Opera House and Harbour Bridge, and its vibrant multicultural community. Sydney is also home to many world-renowned beaches, including Bondi Beach and Manly Beach, and has a thriving arts and cultural scene, with many museums, galleries, and performance venues. It is the largest and most populous city in Australia, with a population of over 5 million people. Sydney is also a major economic hub and is home to many businesses, both large and small, across a wide range of industries.</li>
+                    <img src="images/articles/Sydney_Opera_House_and_Harbour_Bridge_Dusk_(2)_2019-06-21.jpg" alt="Sydney_Opera_House_and_Harbour_Bridge_Dusk">
+                </ol>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Descriptive Writing</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>

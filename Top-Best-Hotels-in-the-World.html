@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Luxury Getaways: top Best Hotels in the World for Your Next Escape</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> Top_Best_Hotels_in_the_World</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/5-Best-Hotels-in-the-World.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">Luxury Getaways: top Best Hotels in the World for Your Next Escape</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/02/2023</div>
+                    </div>
+                </div>
+
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->                
+            <div class="article-discription">
+                Discover the world's most luxurious hotels that are worth considering for your next vacation. From the iconic Raffles Hotel in Singapore to the stunning Belmond Hotel Caruso on the Amalfi Coast, indulge in the elegance, exceptional service, and exquisite amenities offered by these top-notch hotels. Enjoy tranquil retreats, breathtaking views, and remarkable experiences that will leave you with unforgettable memories.
+            </div>
+            <div class="article-body">
+                <ol>
+                    <li><span class="code-style-1">Raffles Hotel, Singapore:</span> This luxurious hotel is an icon in Singapore and is known for its colonial architecture, elegant suites, and exceptional service. Raffles Hotel Singapore is a luxury hotel located in the central business district of Singapore. The hotel was first opened in 1887 and has since become an iconic landmark of Singapore. The hotel features 115 suites and 9 restaurants and bars, including the famous Long Bar where the Singapore Sling cocktail was first created. Other notable features of the hotel include a rooftop swimming pool, a spa, a fitness center, and several event spaces for meetings and weddings. Raffles Hotel has hosted many famous guests over the years, including Queen Elizabeth II, Michael Jackson, and Charlie Chaplin. The hotel has also been featured in several films and novels, such as "Crazy Rich Asians" and "The Raffles Hotel Cookbook." In 2019, Raffles Hotel underwent a major renovation and restoration, which aimed to preserve the heritage of the hotel while upgrading its facilities and services to meet modern expectations.</li>
+                    <img src="images/articles/Raffles_Hotel,_frontage.jpg" alt="Raffles Hotel, Singapore">
+                    <li><span class="code-style-1">Four Seasons Resimgort Bali at Sayan, Indonesia:</span> Nestled in the lush greenery of Bali, this hotel offers stunning views of the Ayung River and surrounding rainforest. It has luxurious villas, excellent spa facilities, and top-notch dining options. The Four Seasons Resort Bali at Sayan is a luxurious resort located in the town of Ubud, Indonesia. Situated amidst lush greenery and overlooking the Ayung River, the resort offers a peaceful retreat for its guests. Accommodation options at the resort include villas and suites, each designed with traditional Balinese architecture and modern amenities. The villas come with private plunge pools, outdoor showers, and spacious terraces with stunning views of the surrounding landscape. The resort features a wide range of facilities and activities, including a spa, fitness center, yoga classes, and cooking classes. Guests can also enjoy the infinity pool overlooking the Ayung River, or take a walk through the resort's lush gardens. The resort's dining options include the Ayung Terrace, which serves authentic Indonesian cuisine, and the Riverside Cafe, which offers a selection of international dishes. The resort also has a bar, Jati Bar, which serves cocktails and other beverages. Overall, the Four Seasons Resort Bali at Sayan is an excellent choice for those seeking a luxurious and tranquil getaway in the heart of Bal</li>     
+                    <img src="images/articles/Four-Seasons-Resort-Bali-at-Sayan-indonesia.jpg" alt="Four Seasons Resort Bali at Sayan, Indonesia">
+                    <li><span class="code-style-1">La Réserve Paris – Hotel and Spa, France:</span> This luxurious hotel is located in the heart of Paris and is known for its stunning dÃ©cor, exceptional service, and Michelin-starred restaurant. La RÃ©serve Paris is a luxury five-star hotel located in the 8th arrondissement of Paris, France. It is situated on Avenue Gabriel, near the famous Champs-Ã‰lysÃ©es and the Grand Palais. The hotel features 26 suites and 14 rooms, each decorated in a classical French style with a contemporary touch. Some of the suites have private terraces with views of the Eiffel Tower. The hotel also has a spa, a fitness centre, a library, a bar, and two restaurants, including Le Gabriel, which has two Michelin stars. La RÃ©serve Paris is known for its exceptional service, attention to detail, and exclusive atmosphere. It is a popular destination for luxury travellers who are looking for a sophisticated and elegant experience in the heart of Paris.</li>
+                    <img src="images/articles/la-reserve-paris.jpg" alt="La Réserve Paris – Hotel and Spa, France">
+                    <li><span class="code-style-1">Aman Tokyo, Japan: </span> This stylish hotel offers breath-taking views of Tokyo's skyline and is known for its serene atmosphere, minimalist design, and exceptional service. The Aman Tokyo is a luxury hotel located in the Otemachi financial district of Tokyo, Japan. It is part of the Aman Resorts chain and features 84 rooms and suites that offer panoramic views of the city. The hotel's design incorporates traditional Japanese materials and motifs, and its facilities include a spa, a fitness center, several restaurants, and event spaces. The Aman Tokyo is known for its tranquil atmosphere and attentive service, making it a popular choice for both business and leisure travelers seeking a serene retreat in the heart of Tokyo.</li>
+                    <img src="images/articles/aman-tokyo-lounge.jpg" alt="Aman Tokyo, Japan">
+                    <li><span class="code-style-1">Belmond Hotel Caruso, Italy:</span> This luxurious hotel is located in the picturesque town of Ravello on the Amalfi Coast and offers stunning views of the Mediterranean Sea. It has luxurious rooms, excellent dining options, and a beautiful infinity pool. The Belmond Hotel Caruso is a luxury hotel located in the town of Ravello on the Amalfi Coast in southern Italy. The hotel is situated on a clifftop overlooking the Mediterranean Sea and offers stunning views of the surrounding coastline. The hotel features 50 rooms and suites, each of which is elegantly decorated and equipped with modern amenities such as air conditioning, flat-screen TVs, and Wi-Fi. The rooms are designed to offer guests a comfortable and luxurious stay, with many of them featuring private balconies or terraces with panoramic sea views. The hotel also offers a range of facilities and services to its guests, including a swimming pool, spa, fitness center, and several restaurants and bars. The hotel's main restaurant, Belvedere, offers traditional Italian cuisine using locally sourced ingredients, while the poolside restaurant, Terrazza Belvedere, serves light Mediterranean fare. In addition to its luxurious accommodations and facilities, the Belmond Hotel Caruso is also known for its stunning gardens, which are filled with fragrant flowers, citrus trees, and panoramic views of the sea. Guests can take a stroll through the gardens or relax on one of the many terraces while enjoying the beautiful surroundings.</li>
+                    <img src="images/articles/Belmond-Hotel-Caruso-Italy.jpeg" alt="Belmond Hotel Caruso, Italy">
+                    <li><span class="code-style-1">The Ritz-Carlton, Hong Kong:</span> This hotel is located on the 102nd to 118th floors of the International Commerce Centre in Hong Kong and is the highest hotel in the world. It offers breath-taking views of the city, luxurious rooms, and excellent dining options. The Ritz-Carlton Hong Kong is a luxury hotel located in the West Kowloon district of Hong Kong. It is situated in the International Commerce Centre (ICC) building, which is one of the tallest skyscrapers in the world. The hotel occupies the 102nd to 118th floors of the building, offering breath-taking views of the city and Victoria Harbour. The Ritz-Carlton Hong Kong has 312 guest rooms and suites, all of which are elegantly furnished and equipped with modern amenities such as flat-screen TVs, iPod docks, and complimentary Wi-Fi. The hotel also features several dining options, including a Michelin-starred Chinese restaurant, a rooftop bar, and a lounge serving afternoon tea. In addition to its luxurious accommodations and dining options, The Ritz-Carlton Hong Kong also has a range of facilities for guests to enjoy. These include a fitness center, a spa, an indoor infinity pool, and a 24-hour business center. The hotel also has several meeting and event spaces, making it an ideal venue for weddings, conferences, and other special occasions.</li>
+                    <img src="images/articles/View-RitzCarltonHongKong-CRHotel.webp" alt="The Ritz-Carlton, Hong Kong">
+                    <li><span class="code-style-1">One&Only Reethi Rah, Maldives:</span> This luxurious resort is located on a private island in the Maldives and offers stunning beaches, luxurious villas, and excellent dining options. One&Only Reethi Rah is a luxury resort located on one of the largest islands in North MalÃ© Atoll in the Maldives. The resort features 122 private villas and suites, nestled amidst lush tropical greenery and overlooking the turquoise waters of the Indian Ocean. One&Only Reethi Rah offers a range of world-class facilities and amenities, including a spa, a fitness center, a tennis court, and several restaurants and bars. Guests can also enjoy a variety of water sports activities, such as snorkeling, diving, and fishing, as well as excursions to nearby islands. The resort's villas and suites are designed with a contemporary flair and feature natural materials such as coconut shell, teak, and silk. Each accommodation option comes with a private pool, a terrace or a sundeck, and a host of modern amenities such as flat-screen TVs, Bose sound systems, and Nespresso machines. One&Only Reethi Rah is known for its impeccable service and attention to detail, making it a popular choice for honeymooners and discerning travelers seeking a luxury escape in the Maldives.</li>
+                    <img src="images/articles/One&Only-Reethi-Rah-Maldives.jpg" alt="One&Only Reethi Rah, Maldives">
+                    <li><span class="code-style-1">The Plaza, New York City, USA:</span> This iconic hotel is located on Fifth Avenue in New York City and is known for its luxurious rooms, excellent service, and prime location. The Plaza is a famous luxury hotel located in New York City, USA. It is situated on the southeast corner of Central Park, at the intersection of Fifth Avenue and Central Park South. The Plaza was built in 1907 and has since become an iconic landmark of New York City. The hotel has hosted many famous guests throughout its history, including world leaders, celebrities, and royalty. It has also been the setting for numerous movies, TV shows, and books. In addition to its hotel rooms, The Plaza offers a variety of dining and entertainment options. The hotel features several restaurants, bars, and lounges, including the iconic Palm Court, which is known for its afternoon tea service. The Plaza also has a shopping arcade, a spa, a fitness center, and a beauty salon. Overall, The Plaza is an iconic symbol of luxury and elegance in New York City, and a must-visit destination for travellers looking for a truly exceptional experience.</li>
+                    <img src="images/articles/ThePlazaNewYorkCityUSA.jpg" alt="The Plaza, New York City, USA">
+                </ol>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Descriptive Writing</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>

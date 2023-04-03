@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exploring Near and Far: A Personal Perspective on Travell</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> Exploring_Near_and_Far</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/Exploring-Near-and-Far.jpg" alt="">
+                </div>
+                <div class="article-thumbnail-title">Exploring Near and Far: A Personal Perspective on Travel</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/02/2023</div>
+                    </div>
+                </div>
+
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->                
+            <div class="article-discription">
+                Comparing benefits of local and foreign travel.
+            </div>
+            <div class="article-body">
+                <p>Traveling is one of the most rewarding experiences that a person can have. Whether it's exploring a local town or city, or jetting off to a foreign country, each type of travel offers its own unique benefits and challenges. In this comparative writing, I will share my personal experiences of traveling locally and internationally.</p>
+                <h2>Local Travel:</h2>
+                <p>One of the best things about traveling locally is the ease and convenience of it all. You don't have to worry about the long lines and security checks at the airport or the language barriers that come with traveling to a foreign country. Instead, you can simply pack a bag and hit the road, knowing that you can easily navigate the area and communicate with the locals. On my local travels, I've been able to discover hidden gems in my own backyard. I've visited quaint towns and villages, hiked through beautiful national parks, and explored the vibrant neighbourhoods of nearby cities. One of the biggest advantages of local travel is that it's often more affordable than traveling internationally. There's no need to spend a lot of money on flights, visas, or accommodations, which means you can often travel for longer periods of time.</p>
+                <h2>Foreign Travel:</h2>
+                <p> Traveling to a foreign country is a completely different experience. From the moment you step off the plane, you're immersed in a new culture and way of life. Everything from the language to the food to the customs is different, and it can be both exhilarating and overwhelming. One of the best things about foreign travel is the opportunity to step outside of your comfort zone and try new things. I've eaten foods I've never heard of, participated in cultural festivals, and navigated public transportation systems that were completely foreign to me. These experiences have pushed me out of my comfort zone and allowed me to grow as a person. Another benefit of traveling internationally is the chance to see some of the world's most iconic landmarks and attractions. From the Eiffel Tower in Paris to the Great Wall of China, there's something awe-inspiring about seeing these famous sites in person.</p>
+                <h2>Conclusion:</h2>
+                <p>In conclusion, both local and foreign travel have their own unique benefits and challenges. Local travel is convenient, affordable, and allows you to discover hidden gems in your own backyard. Foreign travel, on the other hand, is a chance to immerse yourself in a new culture, try new things, and see some of the world's most iconic landmarks. Whether you choose to travel locally or internationally, both types of travel offer the chance for adventure, self-discovery, and unforgettable experiences.</p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Comparative Writing</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>

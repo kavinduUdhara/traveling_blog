@@ -16,12 +16,44 @@
     <link rel="stylesheet" href="css/main-menu-bar.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Explore | Traveling & More | Blog</title>
+    <style>
+        .notification{
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-flex;
+            background-color: #ffffffbb;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            backdrop-filter: blur(5px);
+            display: none;
+        }
+        
+        .notification::after {
+            content: url(/images/svg/close-outline.svg);
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            padding: 1px;
+            border-radius: 10px;
+            background-color: #eeeeee59;
+            margin-left: 10px;
+            cursor: pointer;
+        } 
+        
+        a::after{
+            content: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="notification">
+    </div>
     <div id="mySidenav" class="sidenav">
         <div class="side-contanier">
-            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}">What's new</a>
-            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}">Contact Us</a>
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}">Highlights</a>
+            <a tabindex="0" onclick="window.location.href='#contact_us';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#contact_us';closeNav();navOpen = false;}">Contact Us</a>
         </div>
 
     </div>
@@ -73,9 +105,9 @@
         </div>
         <div class="menu-list">
             <ul>
-                <li tabindex="0" onclick="window.location.href='#what\'s-new'" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';}">what's_new</li>
+                <li tabindex="0" onclick="window.location.href='#what\'s-new'" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';}">Highlights</li>
                 <!-- <li tabindex="0" onclick="window.location.href='#categories'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#categories';}">categories <img src="images/svg/chevron-down-outline.svg" alt=""></li> -->
-                <li tabindex="0" onclick="window.location.href='#categories'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#categories';}">Contact_Us</li>
+                <li tabindex="0" onclick="window.location.href='#contact_us'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#contact_us';}">Contact_Us</li>
                 <!--<li onclick="window.location.href='#about'">About</li>-->
             </ul>
         </div>
@@ -164,31 +196,61 @@
     <div class="whats-new" id="what's-new">
         <div class="title">
             <img src="images/svg/journal-outline.svg" alt="">
-            <h1>what's new</h1>
+            <h1>Highlights</h1>
         </div>
         <div class="blog-posts">
             <div class="blog-post-container">
-                <div class="blog-post" tabindex="0" onclick="window.open('My-Solo-Adventure-in-Japan.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('My-Solo-Adventure-in-Japan.html', '_blank')}">
+                <div class="blog-post" tabindex="0" onclick="window.open('Journey-to-a-Foreign-Land.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('Journey-to-a-Foreign-Land.html', '_blank')}">
                     <div class="image">
-                      <img src="images/articles/traveling-solo-in-Japan-6.jpg" alt="">
+                      <img src="images/articles/Journey-to-a-Foreign-Land.jpg" alt="">
                     </div>
                     <div class="more-info">
-                      <div class="blog-title">My Solo Adventure in Japan</div>
-                      <p>Japan travel: Rich culture, bustling cities, serene temples, stunning landscapes</p>
+                      <div class="blog-title">Journey to a Foreign Land</div>
+                      <p>An exhilarating travel experience, filled with rich cultural discoveries and a newfound sense of freedom.</p>
                       <button class="read-more">Read More</button>
                     </div>
-                  </div>
-                  <div class="blog-post" tabindex="0">
+                </div>
+                <div class="blog-post" tabindex="0" onclick="window.open('Exploring-Near-and-Far.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('Exploring-Near-and-Far.html', '_blank')}">
                     <div class="image">
-                      <img src="images/articles/Solo-Travel-In-Japan-cover.jpg" alt="" onclick="window.open('A-Journey-of-Self-Discovery.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('A-Journey-of-Self-Discovery.html', '_blank')}">
+                      <img src="images/articles/Exploring-Near-and-Far.jpg" alt="">
                     </div>
                     <div class="more-info">
-                      <div class="blog-title">A Journey of Self Discovery</div>
-                      <p>Alone in Japan: A Journey of Self Discovery</p>
-                      <button class="read-more" onclick="window.open('A-Journey-of-Self-Discovery.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('A-Journey-of-Self-Discovery.html', '_blank')}">Read More</button>
+                      <div class="blog-title">Exploring Near and Far</div>
+                      <p>A Personal Perspective on Travel | Comparing benefits of local and foreign travel</p>
+                      <button class="read-more">Read More</button>
                     </div>
-                  </div>
-                  <div class="blog-post" tabindex="0" onclick="window.open('My-Solo-Adventure-in-Japan-j-of-s-d.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('My-Solo-Adventure-in-Japan-j-of-s-d.html', '_blank')}">
+                </div>
+                <div class="blog-post" tabindex="0" onclick="window.open('A-Transformative-Journey.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('A-Transformative-Journey.html', '_blank')}">
+                    <div class="image">
+                      <img src="images/articles/A-Transformative-Journey.jpg" alt="">
+                    </div>
+                    <div class="more-info">
+                      <div class="blog-title">A Transformative Journey</div>
+                      <p>Exploring New Cultures | A vivid account of a traveler's journey across the world, experiencing new sights, sounds, and cultures...</p>
+                      <button class="read-more">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-post" onclick="window.open('The-Art-of-Travel.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('The-Art-of-Travel.html', '_blank')}">
+                    <div class="image">
+                      <img src="images/articles/The-Art of-Travel.jpg" alt="">
+                    </div>
+                    <div class="more-info">
+                      <div class="blog-title">The Art of Travel</div>
+                      <p>"The Art of Travel" is a non-fiction book that explores the concept of travel and its impact on our lives...</p>
+                      <button class="read-more">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-post" tabindex="0" onclick="window.open('The-Grand-Budapest-Hotel-2014.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('The-Grand-Budapest-Hotel-2014.html', '_blank')}">
+                    <div class="image">
+                      <img src="images/articles/The-Grand-Budapest-Hotel-2014.jpg" alt="">
+                    </div>
+                    <div class="more-info">
+                      <div class="blog-title">The Grand Budapest Hotel (2014)</div>
+                      <p>One potential movie that comes to mind is "The Grand Budapest Hotel" (2014), directed by Wes Anderson...</p>
+                      <button class="read-more">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-post" tabindex="0" onclick="window.open('My-Solo-Adventure-in-Japan-j-of-s-d.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('My-Solo-Adventure-in-Japan-j-of-s-d.html', '_blank')}">
                     <div class="image">
                       <img src="images/articles/traveling-solo-in-Japan-6.jpg" alt="">
                     </div>
@@ -197,8 +259,8 @@
                       <p>Journey of Self-Discovery: A Solo Adventure in Japan</p>
                       <button class="read-more">Read More</button>
                     </div>
-                  </div>
-                  <div class="blog-post" tabindex="0" onclick="window.open('Different-Types-Of-Travel.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('Different-Types-Of-Travel.html', '_blank')}">
+                </div>
+                <div class="blog-post" tabindex="0" onclick="window.open('Different-Types-Of-Travel.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('Different-Types-Of-Travel.html', '_blank')}">
                     <div class="image">
                       <img src="images/articles/Different-Types-Of-Travel.jpg" alt="">
                     </div>
@@ -207,10 +269,106 @@
                       <p>Leisure travel | Adventure travel | Cultural travel | Luxury travel</p>
                       <button class="read-more">Read More</button>
                     </div>
-                  </div>
+                </div>
             </div>
-          </div>
-          
+        </div>
+        <button class="view-all" class="blog-post" onclick="window.open('all-articles.html', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('all-articles.html', '_blank')}">View all blogs</button>
+    </div>
+    <div class="subscribe" id="subscribe">
+        <div class="title">
+            <img src="images/svg/chatbox-ellipses-outline.svg" alt="">
+            <h1>Never miss a beat</h1>
+        </div>
+        <div class="holder">
+                <input name="Email" type="email" placeholder="subscribe from your email" id="sub-email" required>
+                <button type="submit" onclick="subscribe()" id="sub-button">Subscribe</button>
+            <script>
+                function showNotification(notifi, color) {
+                    var audio = new Audio('/mp3/Sound-effect-text-pop-up.mp3');
+                    audio.play();
+                    var notification = document.querySelector('.notification');
+                    notification.innerHTML = notifi;
+                    notification.style.backgroundColor = color;
+                    notification.style.display = 'inline-flex';
+                    notification.animate([
+                      {bottom: '-100px', opacity: 0},
+                      {bottom: '10px', opacity: 1}
+                    ], {
+                      duration: 500,
+                      easing: 'ease-in-out'
+                    });
+                  
+                    notification.addEventListener('click', function() {
+                      notification.animate([
+                        {bottom: '10px', opacity: 1},
+                        {bottom: '-100px', opacity: 0},
+                      ], {
+                        duration: 500,
+                        easing: 'ease-in-out'
+                      });
+                      setTimeout(function() {
+                        notification.style.display = "none";
+                      }, 500);
+                    });
+                  
+                    setTimeout(function() {
+                      notification.animate([
+                        {bottom: '10px', opacity: 1},
+                        {bottom: '-100px', opacity: 0},
+                      ], {
+                        duration: 500,
+                        easing: 'ease-in-out'
+                      });
+                      setTimeout(function() {
+                        notification.style.display = "none";
+                      }, 500);
+                    }, 8000);
+                  }                  
+                
+                
+                function subscribe(){
+                    var sub_button = document.getElementById("sub-button");
+                    var sub_email = document.getElementById('sub-email').value;
+
+                    if (sub_email.length === 0) {
+                        notifi = "Enter your email befor you go 🧐";
+                        color = 'peachpuff';
+                        showNotification(notifi, color);
+                        return;
+                    }
+
+                    sub_button.disabled = true;
+                    sub_button.innerHTML = 'subscribed';
+                    sub_button.style.color = 'rgb(78, 77, 79)';
+                    sub_button.style.border = '3px solid rgb(78, 77, 79)';
+                    sub_button.style.backgroundColor = 'rgba(128, 128, 128, 0.232)';
+                    sub_button.style.backdropFilter = 'blur(5px)';
+
+
+                    var form = new FormData();
+                    form.append('Email', sub_email);
+
+                    var request = new XMLHttpRequest();
+                    request.open('POST', 'https://script.google.com/macros/s/AKfycbyXtWULh1JaHJVhtufA2mYTpoh8pu4VSgPVZj57jyQXQ2JJwRPmLtlXSm7TUMwm1SZl/exec');
+                    request.send(form);                    
+
+                    request.onreadystatechange = function(){
+                        if (this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                            var response = JSON.parse(request.responseText);
+                            if (response.result === "success") {
+                                notifi = "You've subscribed successfully ✌️";
+                                color = "#ffffffbb";
+                            } else {
+                                notifi = "Opps! someting went wrong 🫥";
+                                color = 'peachpuff';
+                            }
+                            showNotification(notifi, color);
+                        }
+                    }
+                }
+
+            </script>
+        </div>
     </div>
     <div class="authors-info" id="authors-info">
         <div class="title">
@@ -232,9 +390,86 @@
             </div>
         </div>
     </div>
+    <div class="title"></div>
+    <div class="contact_us" id="contact_us">
+        <div class="title">
+            <img src="images/svg/chatbox-ellipses-outline.svg" alt="">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="c-pannel">
+            <div class="inp">
+                <img src="/images/svg/person-outline.svg" alt="">
+                <input type="text" placeholder="name" id="submit-name">                
+            </div>
+            <div class="inp">
+                <img src="/images/svg/mail-outline.svg" alt="">
+                <input type="email" placeholder="email" id="submit-email">
+            </div>
+            <div class="inp">
+                <img src="/images/svg/file-tray-full-outline.svg" alt="">
+                <input type="text" placeholder="subject/title" id="submit-sub">
+            </div>
+            <div class="inp">
+                <img src="/images/svg/chatbox-ellipses-outline.svg" alt="" style="top:7px">
+                <textarea name="submit-text" placeholder="Your' message" id="submit-text"></textarea>
+            </div>
+            <button id="submit-button" onclick="submit()">Submit <img src="images/svg/send-outline.svg" alt=""></button>
+        </div>
+        <script>
+            function submit(){
+                var submit_button = document.getElementById("submit-button");
+                var submit_email = document.getElementById('submit-email').value;
+                var submit_name = document.getElementById('submit-name').value;
+                var submit_sub = document.getElementById('submit-sub').value;
+                var submit_text = document.getElementById('submit-text').value;
+
+                if (submit_email === '' || submit_name === '' || submit_sub === '' || submit_text === '') {
+                    // If any of the values are empty, display an error message
+                    notifi = "All fields must be filled. 🧐";
+                    color = 'peachpuff';
+                    showNotification(notifi, color);
+                    return;
+                }
+
+                submit_button.disabled = true;
+                submit_button.innerHTML = 'sent';
+                submit_button.style.color = '#3c7880ec';
+                submit_button.style.border = '3px solid #3c7880ec';
+                submit_button.style.backgroundColor = 'rgba(128, 128, 128, 0.232)';
+                submit_button.style.backdropFilter = 'blur(5px)';
+
+
+                var form1 = new FormData();
+                form1.append('name', submit_name);
+                form1.append('email', submit_email);
+                form1.append('sub', submit_sub);
+                form1.append('msg', submit_text);                
+
+                var request = new XMLHttpRequest();
+                request.open('POST', 'https://script.google.com/macros/s/AKfycbzG3yBG0MgYKu5XNTBHCBYtpgwKpRJ5PpPFkKTsDOMyg0MbuHgfImxgYsdt7lCLUV_XHA/exec');
+                request.send(form1);                    
+
+                request.onreadystatechange = function(){
+                    if (this.readyState === XMLHttpRequest.DONE && this.status === 200){
+                        var response = JSON.parse(request.responseText);
+                        if (response.result === "success") {
+                            notifi = "We recived your message. ✌️";
+                            color = "#ffffffbb";
+                        } else {
+                            notifi = "Opps! someting went wrong.";
+                            color = 'peachpuff';
+                        }
+                        showNotification(notifi, color);
+                    }
+                }
+            }
+        </script>
+        <div class="title"></div>
+    </div>
     <div class="art-footer">
         <img src="/images/explore-logo.png" alt="">
         <div class="text-001">With Ladini</div>
     </div>
+
 </body>
 </html>

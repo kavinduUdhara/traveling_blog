@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/explore-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scrool-bar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main-menu-bar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Delicious food in five stars hotel</title>
+    <style>
+        body{align-items: center;}
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="side-contanier">
+            <a tabindex="0" onclick="window.location.href='#what\'s-new';closeNav();navOpen = false;myFunction(document.getElementById('conta'));" onkeydown="if(event.keyCode === 13) {window.location.href = '#what\'s-new';closeNav();navOpen = false;}"><img src="images/svg/chevron-forward-outline.svg" alt=""> What's new</a>
+        </div>
+
+    </div>
+    <script>
+        var navOpen = false;
+        function toggleNav() {
+            if (navOpen) {
+                closeNav();
+                navOpen = false;
+            } else {
+                openNav();
+                navOpen = true;
+            }
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Listen for window resize events and adjust the side navigation width */
+        function handleResize() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth > 600) {
+              document.getElementById("mySidenav").style.width = "0";
+            } else {
+                if(navOpen){
+                    document.getElementById("mySidenav").style.width = "300px";
+                }
+            }
+          }
+          
+          window.addEventListener("resize", handleResize);
+    </script>
+    <div class="menu">  
+        <!-- <div class="container" onclick="myFunction(this);toggleNav()" id="conta" tabindex="0" onkeydown="if(event.keyCode === 13) {myFunction(this);toggleNav()}">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div> -->
+        <script>
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+        </script>
+        <div class="menu-logo" onclick="window.location.href='../'" tabindex="0" onkeydown="if(event.keyCode === 13) {window.location.href = '../';}">
+            <img src="images/explore-logo.png" alt="logo">
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li tabindex="0" onclick="window.location.href='#'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#';}"><img src="images/svg/chevron-forward-outline.svg" alt=""> Delicious_food_in_five_stars_hotel</li>
+                <!--<li onclick="window.location.href='#about'">About</li>-->
+            </ul>
+        </div>
+        <!--
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          -->
+        <div class="space">
+        </div>
+        <div class="menu-f-icons">
+            <div class="f-icon" tabindex="0">
+                <img src="images/svg/search-outline.svg" alt="">
+            </div>
+            <div class="f-icon profile" title="authers information" tabindex="0" onclick="window.location.href='#authors-info'" class="drop-down" onkeydown="if(event.keyCode === 13) {window.location.href = '#authors-info';}">
+                <img src="images/profile.jpg" alt="">
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script>
+            // When the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+            
+            function myFunction() {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("myBar").style.width = scrolled + "%";
+            }
+        </script>
+    </div>
+    <div class="art-main-body">
+        <div class="article-container">
+            <div class="article-thumbnail">
+                <div class="article-thumbnail-img">
+                    <img src="images/articles/Delicious-food-in-five-stars-hotel.jpg" alt="Delicious food in five stars hotel">
+                </div>
+                <div class="article-thumbnail-title">Delicious food in five stars hotel</div>
+                <div class="author-description">
+                    <div class="author-profile-picture">
+                        <img src="images/profile.jpg" alt="">
+                    </div>
+                    <div class="author-name_date">
+                        <div class="author-name">Ladini Wijerathna</div>
+                        <div class="date">04/02/2023</div>
+                    </div>
+                </div>
+
+                <!-- <div class="change-article-thumbnail-img">
+                    <img src="images/svg/camera-reverse-outline.svg" alt="">
+                </div> -->
+            </div>
+            <!-- <div class="qlinks">
+                <div class="qlink t1">Break Points <img src="/images/svg/chevron-down-outline.svg" alt=""></div>
+                <div class="qlink">Narrative</div>
+                <div class="qlink">Comparative</div>
+                <div class="qlink">Descriptive</div>
+            </div> -->                
+            <div class="article-discription">
+                Five-star hotels often offer some of the most delicious and high-quality food available. Here are some popular dishes you might find at a five-star hotel:
+            </div>
+            <div class="article-body">
+                <ol>
+                    <li><span class="code-style-1">Steak:</span> Steak is a popular food item that is usually made from beef, although it can also be made from other meats such as pork, lamb, and even fish. The meat is typically cut into thick slices and then cooked on a grill, in a pan, or under a broiler. There are several different types of steak, with varying degrees of tenderness and flavour. Some popular cuts include filet mignon, ribeye, sirloin, and New York strip. The way in which the steak is prepared can also have a significant impact on its flavour, with some people preferring to grill or pan-sear their steak, while others prefer to slow-cook it in an oven or smoker. Steak is a good source of protein, iron, and other important nutrients. However, it is also high in saturated fat and calories, so it should be consumed in moderation as part of a balanced diet.</li>
+                    <img src="images/articles/Steak.jpg" alt="Steak">
+                    <li><span class="code-style-1">Seafood:</span> Seafood refers to any type of edible aquatic animal or plant, including fish, shellfish, and seaweed. It is a popular food choice in many cultures around the world due to its unique taste, nutritional value, and versatility in cooking. Fish is one of the most commonly consumed types of seafood, with popular varieties including salmon, tuna, cod, and halibut. These fish are rich in omega-3 fatty acids, which are beneficial for heart health, as well as protein and other important nutrients. Shellfish, such as shrimp, crab, lobster, and clams, are also popular seafood options. They are high in protein, vitamins, and minerals, but may also contain high levels of cholesterol. It is important to properly cook shellfish to avoid foodborne illness. Seaweed is a type of seafood that is commonly used in Japanese cuisine, and is increasingly being used in other types of cuisine as well. It is a good source of vitamins, minerals, and antioxidants, and is often used in soups, salads, and sushi rolls. Overall, seafood can be a healthy and delicious addition to a balanced diet, as long as it is consumed in moderation and prepared properly.</li>
+                    <img src="images/articles/seafood-restaurants-charlotte-nc.jpg" alt="Seafood">
+                    <li><span class="code-style-1">Sushi:</span> Sushi is a traditional Japanese dish that consists of small portions of vinegared rice (sushi rice) combined with various other ingredients, such as raw fish, seafood, vegetables, or egg. The ingredients are typically rolled into bite-sized pieces using sheets of seaweed (nori), and may be served with soy sauce, wasabi, and pickled ginger. There are many different types of sushi, each with their own unique flavor and texture. Some popular types include:
+                        <img src="images/articles/spicy-crab-rolls4-1654808938.jpg" alt="Sushi">
+                        <ul>
+                            <li><span class="code-style-1">Nigiri:</span> a small ball of sushi rice topped with a slice of raw fish or seafood</li>
+                            <li><span class="code-style-1">Maki:</span> sushi rolls made with sushi rice and other ingredients rolled inside a sheet of nori</li>
+                            <li><span class="code-style-1">Temaki:</span> a cone-shaped sushi roll made by wrapping nori around sushi rice and other ingredients</li>
+                            <li><span class="code-style-1">Sashimi:</span> slices of raw fish or seafood served without rice Sushi is often considered a healthy food option, as it is typically low in fat and high in protein, vitamins, and minerals. However, it is important to consume sushi from reputable sources to ensure the fish is fresh and has been properly handled and prepared.</li>
+                        </ul>
+                        In addition to its taste and nutritional value, sushi is also appreciated for its aesthetic presentation, with chefs often creating intricate and colorful arrangements of ingredients.
+                    </li>
+                    <li><span class="code-style-1">Pasta:</span> Pasta is a staple food that originated in Italy and is now enjoyed all over the world. It is typically made from wheat flour and water, and is available in many different shapes and sizes, including spaghetti, linguine, fettuccine, penne, and rigatoni. Pasta can be served in a variety of ways, with many different sauces and accompaniments. Some popular pasta dishes include:
+                        <br><img src="images/articles/Creamy-Spinach-Tomato-Pasta-bowl-500x500.jpg" alt="Pasta">
+                        <ul>
+                            <li><span class="code-style-1">Spaghetti with marinara sauce:</span> long, thin noodles served with a tomato-based sauce and often topped with Parmesan cheese.</li>
+                            <li><span class="code-style-1">Fettuccine Alfredo:</span> wide, flat noodles served with a creamy sauce made from butter, cream, and Parmesan cheese.</li>
+                            <li><span class="code-style-1">Lasagna:</span> layered pasta sheets with meat or vegetables and tomato sauce, topped with cheese and baked in the oven.</li>
+                            <li><span class="code-style-1">Carbonara:</span> spaghetti served with a sauce made from eggs, cheese, and bacon or pancetta.</li>
+                        </ul>
+                        Pasta is a good source of carbohydrates, which provide energy for the body, as well as some protein and fiber. However, many pasta dishes are also high in calories and fat, so it is important to enjoy pasta in moderation as part of a balanced diet. Overall, pasta is a versatile and satisfying food that can be enjoyed in a wide variety of ways, from simple and traditional to complex and creative.
+                    </li>
+                    <li>
+                        <span class="code-style-1">Desserts:</span> Dessert is a sweet course that is typically served after a meal, although it can also be enjoyed on its own as a snack or treat. Desserts come in many different forms, including cakes, pies, pastries, ice cream, puddings, and fruit-based desserts.
+                        <br> Some popular types of dessert include: <br>
+                        <img src="images/articles/Desserts.jpeg" alt="Desserts">
+                        <ul>
+                            <li><span class="code-style-1">Chocolate cake:</span> a rich, moist cake made with chocolate and often topped with frosting or ganache.</li>
+                            <li><span class="code-style-1">Apple pie:</span> a classic American dessert made with a flaky crust and filled with sliced apples and spices.</li>
+                            <li><span class="code-style-1">Cheesecake:</span> a rich, creamy cake made with cream cheese, eggs, and sugar, often served with a fruit topping or caramel sauce.</li>
+                            <li><span class="code-style-1">Ice cream:</span> a frozen dessert made from milk, cream, sugar, and flavorings, such as vanilla, chocolate, or fruit.</li>
+                        </ul>
+                        Desserts are often enjoyed as a special treat, but they can also be part of a balanced diet when consumed in moderation. Many desserts are high in sugar, fat, and calories, so it is important to be mindful of portion sizes and to balance them with healthy food choices. Overall, desserts offer a delicious and satisfying way to indulge in something sweet and special, and can be enjoyed as a special occasion treat or as a regular part of a healthy and balanced diet.
+                    </li>
+                    <li>
+                        <span class="code-style-1">Champagne:</span> Champagne is a sparkling wine that is produced in the Champagne region of France. It is made using specific grape varieties, including Pinot Noir, Pinot Meunier, and Chardonnay, and undergoes a secondary fermentation process in the bottle to create its characteristic bubbles. Champagne is often associated with celebrations and special occasions, and is often served as an aperitif before a meal or as a toast during a celebration. It is also used in cocktails, such as the classic Champagne cocktail, which combines Champagne with sugar, bitters, and a twist of lemon.
+                        <br>There are many different styles of Champagne, including: <br>
+                        <img src="images/articles/Champagne.jpg" alt="Champagne">
+                        <ul>
+                            <li><span class="code-style-1">Brut:</span> a dry Champagne with minimal sweetness</li>
+                            <li><span class="code-style-1">Extra Brut:</span> a very dry Champagne with no added sugar</li>
+                            <li><span class="code-style-1">Demi-sec:</span> a sweeter Champagne with more residual sugar</li>
+                            <li><span class="code-style-1">Rosé:</span> a Champagne made with red grapes, giving it a pink color and a fruity flavor</li>
+                        </ul>
+                        Champagne is often considered a luxury beverage due to its high cost and association with special occasions. However, there are also more affordable options available, and many people enjoy Champagne as a regular treat or part of their lifestyle. Overall, Champagne is a popular and distinctive type of sparkling wine that is appreciated for its effervescence, complexity, and versatility in pairing with a wide variety of foods
+                    </li>
+                    <li>
+                        <span class="code-style-1">Dim sum:</span> Dim sum is a type of Cantonese cuisine that originated in Southern China and is now enjoyed all over the world. It consists of small, bite-sized portions of food that are served in steamer baskets or on small plates, often accompanied by tea. Dim sum dishes are typically served in the morning or early afternoon as a brunch or lunch.
+                        <br>Some popular dim sum dishes include: <br>
+                        <img src="images/articles/Dim-sum.jpg" alt="Dim sum">
+                        <ul>
+                            <li><span class="code-style-1">Siu mai:</span> small steamed dumplings filled with pork and shrimp.</li>
+                            <li><span class="code-style-1">Har gow:</span> shrimp dumplings wrapped in a translucent rice flour skin.</li>
+                            <li><span class="code-style-1">Char siu bao:</span> steamed buns filled with barbecued pork.</li>
+                            <li><span class="code-style-1">Cheong fun:</span> steamed rice noodle rolls filled with shrimp or pork.</li>
+                            <li><span class="code-style-1">Egg tarts:</span> small pastry cups filled with sweet custard.</li>
+                        </ul>
+                        Dim sum is often enjoyed as a communal dining experience, with diners sharing the small dishes and trying a wide variety of flavors and textures. Tea is an important part of the dim sum experience, with many restaurants offering a wide selection of Chinese teas to accompany the meal. Overall, dim sum offers a delicious and unique way to experience Cantonese cuisine, with a wide variety of flavors, textures, and ingredients to explore
+                    </li>
+                </ol>
+                <p>These are just a few examples of the types of delicious food you might find at a five-star hotel. Keep in mind that menus can vary widely depending on the hotel and its location, so be sure to check out the dining options before you book your stay.</p>
+            </div>
+        </div>
+        <div class="tags">
+            <div class="tag" tabindex="0">Article</div>
+            <div class="tag" tabindex="0">blog</div>
+            <div class="tag" tabindex="0">Descriptive Writing</div>
+        </div>
+        <div class="authors-info" id="authors-info">
+            <div class="info-pannel" tabindex="0" style="width: 95%;">
+                <div class="profile">
+                    <img src="images/profile.jpg" alt="">
+                </div>
+                <div class="other-info">
+                    <div class="name">Ladini Wijerathna</div>
+                    <div class="dis">I'm a travel enthusiast, beauty lover, and music aficionado with a background in International Business Management. Follow along as I share my personal travel experiences, tips, and recommendations for exploring the world. Join me on this adventure to make your own journeys unforgettable.</div>
+                </div>
+                <div class="social-media">
+                    <img src="images/svg/logo-facebook.svg" alt="facebook" onclick="window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.facebook.com/ladini.wijerathna.9', '_blank')}">
+                    <img src="images/svg/logo-instagram.svg" alt="instergram" onclick="window.open('https://www.instagram.com/ladiii_0105/', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.instagram.com/ladiii_0105/', '_blank')}">
+                    <img src="images/svg/logo-snapchat.svg" alt="snapchat" onclick="window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')" tabindex="0" onkeydown="if(event.keyCode === 13) {window.open('https://www.snapchat.com/add/ladiiwijerathna?share_id=QU1SMxkbyNo&locale=en-GB', '_blank')}">
+                </div>
+            </div>
+        </div>
+        <div class="art-footer">
+            <img src="/images/explore-logo.png" alt="">
+            <div class="text-001">With Ladini</div>
+        </div>
+    </div>
+</body>
+</html>
